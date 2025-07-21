@@ -1,0 +1,205 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.searchForm {
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.searchInput {
+  padding: 0.75rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.searchInput:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.searchButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.searchButton:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.searchButton:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.error {
+  background-color: #fee;
+  color: #c0392b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.results {
+  margin-bottom: 2rem;
+}
+
+.results h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.resultsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resultItem {
+  margin-bottom: 0.5rem;
+}
+
+.cityButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.cityButton:hover {
+  border-color: #3498db;
+  background-color: #f8f9fa;
+}
+
+.cityName {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.25rem;
+}
+
+.cityDetails {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.history {
+  border-top: 1px solid #e1e8ed;
+  padding-top: 1.5rem;
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.historyHeader h3 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.clearButton {
+  background: none;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.clearButton:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.historyItem {
+  margin: 0;
+}
+
+.historyButton {
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  color: #2c3e50;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.historyButton:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+/* Mobile-first responsive design */
+@media (min-width: 768px) {
+  .inputGroup {
+    flex-direction: row;
+  }
+  
+  .searchInput {
+    flex: 1;
+  }
+  
+  .searchButton {
+    flex-shrink: 0;
+  }
+}

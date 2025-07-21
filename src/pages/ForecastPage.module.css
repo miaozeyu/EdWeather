@@ -1,0 +1,179 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.backLink {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #2980b9;
+}
+
+.cityName {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+  flex: 1;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.error {
+  background-color: #fee;
+  color: #c0392b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.currentWeather {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.currentWeather h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.currentStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 0.25rem;
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.forecast {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.dailyForecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.dayCard {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.dayCard:hover {
+  transform: translateY(-2px);
+}
+
+.dayDate {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.dayWeather {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-bottom: 0.75rem;
+  min-height: 2.4em;
+}
+
+.dayTemps {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tempHigh {
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+.tempLow {
+  color: #3498db;
+}
+
+.precipitation {
+  font-size: 0.8rem;
+  color: #3498db;
+  background-color: #e3f2fd;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .cityName {
+    font-size: 1.5rem;
+  }
+  
+  .currentStats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .dailyForecast {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
