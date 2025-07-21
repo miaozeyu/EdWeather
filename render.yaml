@@ -1,0 +1,24 @@
+# Render Configuration File
+# Reference: https://render.com/docs/deploy-next-using-render-config-files
+
+# Build and deploy a static site
+databases:
+  - name: edweather
+    databaseName: edweather
+    user: edweather
+    plan: free
+
+services:
+  - type: web
+    name: edweather
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: "./dist"
+    envVars:
+      - key: VITE_OPENWEATHER_API_KEY
+        sync: false  # This will prompt you to set this value when deploying
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: "/index.html"
+    plan: free

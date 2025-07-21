@@ -8,7 +8,9 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "start": "vite preview --port $PORT",
+    "render-build": "npm run build"
   },
   "dependencies": {
     "@types/recharts": "^1.8.29",
